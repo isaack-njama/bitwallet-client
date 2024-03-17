@@ -6,9 +6,10 @@ import {
   IonToolbar,
 } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import './Tab1.css';
 
-const Tab1: React.FC = () => {
+import './Pay.css';
+
+const Pay: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
@@ -19,13 +20,13 @@ const Tab1: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse='condense'>
           <IonToolbar>
-            <IonTitle size='large'>Tab 1</IonTitle>
+            <IonTitle size='large'>Pay</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name='Tab 1 page' />
+        <ExploreContainer name='Pay page' />
       </IonContent>
     </IonPage>
   );
 };
 
-export default Tab1;
+export default Pay;
