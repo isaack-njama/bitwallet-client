@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test.e2e": "cypress run",
     "test.unit": "vitest",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prepare": "husky"
   },
   "dependencies": {
     "@capacitor/app": "5.0.7",
@@ -40,7 +41,11 @@
     "cypress": "^13.5.0",
     "eslint": "^8.35.0",
     "eslint-plugin-react": "^7.32.2",
+    "husky": "^9.0.11",
     "jsdom": "^22.1.0",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "pretty-quick": "^4.0.0",
     "terser": "^5.4.0",
     "typescript": "^5.1.6",
     "vite": "^5.0.0",
