@@ -14,6 +14,7 @@ const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
           target='_blank'
           rel='noopener noreferrer'
           href='https://ionicframework.com/docs/components'
+          style={{ color: '#014441' }}
         >
           UI Components
         </a>

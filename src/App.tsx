@@ -55,7 +55,7 @@ const App: React.FC = () => (
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot='bottom'>
-          <IonTabButton tab='pay' href='/pay'>
+          <IonTabButton tab='pay' href='/pay' style={{ color: '#014441' }}>
             <IonIcon aria-hidden='true' icon={arrowUp} />
             <IonLabel>Pay</IonLabel>
           </IonTabButton>
