@@ -1,0 +1,7 @@
+{
+  "name": "bitwallet-client",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
