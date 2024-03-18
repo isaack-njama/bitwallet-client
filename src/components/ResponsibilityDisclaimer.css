@@ -1,0 +1,18 @@
+.disclaimer-container {
+  font-family: 'Poppins';
+  font-weight: 'light';
+  text-align: center;
+  margin: 0;
+  position: relative;
+  top: 30%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.disclaimer {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  margin: 100px;
+}
