@@ -1,8 +1,9 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { arrowUp, cog, list } from 'ionicons/icons';
+
 import Welcome from './pages/Welcome';
+import Disclaimer from './pages/Disclaimer';
 import Pay from './pages/Pay';
 import Settings from './pages/Settings';
 import Balance from './pages/Balance';
@@ -31,13 +32,12 @@ setupIonicReact();
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      {/* <IonTabs> */}
       <IonRouterOutlet>
         <Route exact path='/welcome'>
           <Welcome />
         </Route>
-        <Route exact path='/pay'>
-          <Pay />
+        <Route exact path='/disclaimer'>
+          <Disclaimer />
         </Route>
         <Route exact path='/settings'>
           <Settings />

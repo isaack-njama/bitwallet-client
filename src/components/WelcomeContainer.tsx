@@ -25,7 +25,7 @@ const WelcomeContainer: React.FC<ContainerProps> = ({ title, subtitle }) => {
           Create new wallet
         </button>
         <a
-          target='#'
+          target='/restore'
           style={{
             color: '#014441',
             textDecoration: 'none',
