@@ -21,7 +21,7 @@ const ItemList: React.FC<ItemListProps> = ({ label, chevronIcon }) => {
                 display: 'flex',
                 flexDirection: 'row',
                 gap: '40px',
-                maxWidth: '40%',
+                maxWidth: '50%',
                 margin: 'auto',
               }}
             >
