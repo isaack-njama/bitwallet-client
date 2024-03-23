@@ -12,22 +12,25 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ text, target }) => {
   return (
     <>
-      <IonButton
-        style={{
-          '--border-radius': '5px',
-          '--background': '#014441',
-          width: '335px',
-          height: '60px',
-          fontSize: '21px',
-          margin: 'auto',
-          position: 'relative',
-          transform: 'translateY(-50%)',
-        }}
+      <a
+        style={{ textDecoration: 'none', color: '#FFFFF0', margin: 'auto' }}
+        href={target}
       >
-        <a style={{ textDecoration: 'none', color: '#FFFFF0' }} href={target}>
+        <IonButton
+          style={{
+            '--border-radius': '5px',
+            '--background': '#014441',
+            width: '335px',
+            height: '60px',
+            fontSize: '21px',
+            margin: 'auto',
+            position: 'relative',
+            transform: 'translateY(-50%)',
+          }}
+        >
           {text}
-        </a>
-      </IonButton>
+        </IonButton>
+      </a>
     </>
   );
 };

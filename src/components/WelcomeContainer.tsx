@@ -9,7 +9,7 @@ const WelcomeContainer: React.FC<ContainerProps> = ({ title, subtitle }) => {
   return (
     <div className='welcome-container'>
       <div className='homepage'>
-        <img src='../../public/Logo.svg' width='100px' height='100px'></img>
+        <img src='/Logo.svg' width='100px' height='100px'></img>
         <strong style={{ fontSize: '36px', color: '#0A0A0A' }}>{title}</strong>
         <p style={{ fontSize: '16px', color: '#777777' }}>{subtitle}</p>
         <button
@@ -22,10 +22,15 @@ const WelcomeContainer: React.FC<ContainerProps> = ({ title, subtitle }) => {
             fontSize: '21px',
           }}
         >
-          Create new wallet
+          <a
+            style={{ textDecoration: 'none', color: '#FFFFF0' }}
+            href='/disclaimer'
+          >
+            Create new wallet
+          </a>
         </button>
         <a
-          target='/restore'
+          href='/restore'
           style={{
             color: '#014441',
             textDecoration: 'none',

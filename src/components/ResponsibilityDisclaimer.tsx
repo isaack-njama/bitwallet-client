@@ -6,13 +6,17 @@ import { IonLabel } from '@ionic/react';
 
 interface ContainerProps {
   title: string;
+  subtitle?: string;
 }
 
-const ResponsibilityDisclaimer: React.FC<ContainerProps> = ({ title }) => {
+const ResponsibilityDisclaimer: React.FC<ContainerProps> = ({
+  title,
+  subtitle,
+}) => {
   return (
     <div className='disclaimer-container'>
       <div className='disclaimer'>
-        <BackButton text='Back' />
+        <BackButton text='Back' target='/welcome' />
         <img src='/circle_arrow up.svg' width='80px' height='80px' />
         <IonLabel
           style={{
@@ -23,6 +27,9 @@ const ResponsibilityDisclaimer: React.FC<ContainerProps> = ({ title }) => {
           }}
         >
           {title}
+        </IonLabel>
+        <IonLabel style={{ fontSize: '18px', color: '#777777' }}>
+          {subtitle}
         </IonLabel>
         <ItemList
           label='With bitcoin, you are your own bank. No one else has access to your private keys.'
