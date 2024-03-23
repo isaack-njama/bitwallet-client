@@ -1,19 +1,10 @@
 import { Redirect, Route } from 'react-router-dom';
-import {
-  IonApp,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
-  setupIonicReact,
-} from '@ionic/react';
+import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { arrowUp, cog, list } from 'ionicons/icons';
-import Pay from './pages/Pay';
-import Settings from './pages/Settings';
-import Balance from './pages/Balance';
+
+import Welcome from './pages/Welcome';
+import Disclaimer from './pages/Disclaimer';
+import FundWallet from './pages/FundWalletPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,42 +24,35 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import FundWalletPage from './pages/FundWalletPage';
+import FundingAddressPage from './pages/FundingAddress';
+import LatestTransaction from './pages/LatestTransaction';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route exact path='/pay'>
-            <Pay />
-          </Route>
-          <Route exact path='/settings'>
-            <Settings />
-          </Route>
-          <Route path='/balance'>
-            <Balance />
-          </Route>
-          <Route exact path='/'>
-            <Redirect to='/balance' />
-          </Route>
-        </IonRouterOutlet>
-        <IonTabBar slot='bottom'>
-          <IonTabButton tab='pay' href='/pay' style={{ color: '#014441' }}>
-            <IonIcon aria-hidden='true' icon={arrowUp} />
-            <IonLabel>Pay</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab='balance' href='/balance'>
-            <IonIcon aria-hidden='true' icon={list} />
-            <IonLabel>Balance</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab='settings' href='/settings'>
-            <IonIcon aria-hidden='true' icon={cog} />
-            <IonLabel>Settings</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
+      <IonRouterOutlet>
+        <Route exact path='/transactions'>
+          <LatestTransaction />
+        </Route>
+        <Route exact path='/funding-address'>
+          <FundingAddressPage />
+        </Route>
+        <Route exact path='/fund-wallet'>
+          <FundWalletPage />
+        </Route>
+        <Route exact path='/welcome'>
+          <Welcome />
+        </Route>
+        <Route exact path='/disclaimer'>
+          <Disclaimer />
+        </Route>
+        <Route exact path='/'>
+          <Redirect to='/welcome' />
+        </Route>
+      </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
 );

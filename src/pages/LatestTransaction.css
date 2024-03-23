@@ -1,0 +1,27 @@
+ion-card {
+  --background: none;
+  margin: 36px;
+}
+
+ion-label {
+  --background: none;
+  color: #0a0a0a;
+}
+
+ion-item {
+  --background: none;
+  color: #0a0a0a;
+}
+
+ion-header {
+  display: flex;
+}
+
+ion-toolbar {
+  --background: none;
+  color: #0a0a0a;
+}
+
+ion-title {
+  cursor: pointer;
+}
