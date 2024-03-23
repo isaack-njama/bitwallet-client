@@ -3,9 +3,13 @@ import { IonButton } from '@ionic/react';
 
 interface ButtonProps {
   text: string;
+  icon?: React.ReactElement;
+  target?: string;
+  width?: string;
+  height?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ text }) => {
+const Button: React.FC<ButtonProps> = ({ text, target }) => {
   return (
     <>
       <IonButton
@@ -20,7 +24,9 @@ const Button: React.FC<ButtonProps> = ({ text }) => {
           transform: 'translateY(-50%)',
         }}
       >
-        {text}
+        <a style={{ textDecoration: 'none', color: '#FFFFF0' }} href={target}>
+          {text}
+        </a>
       </IonButton>
     </>
   );
