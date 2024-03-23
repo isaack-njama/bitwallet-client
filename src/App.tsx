@@ -4,7 +4,7 @@ import { IonReactRouter } from '@ionic/react-router';
 
 import Welcome from './pages/Welcome';
 import Disclaimer from './pages/Disclaimer';
-import FundWallet from './pages/FundWallet';
+import FundWallet from './pages/FundWalletPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -24,6 +24,8 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import FundWalletPage from './pages/FundWalletPage';
+import FundingAddressPage from './pages/FundingAddress';
 
 setupIonicReact();
 
@@ -31,8 +33,11 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
+        <Route exact path='/funding-address'>
+          <FundingAddressPage />
+        </Route>
         <Route exact path='/fund-wallet'>
-          <FundWallet />
+          <FundWalletPage />
         </Route>
         <Route exact path='/welcome'>
           <Welcome />
