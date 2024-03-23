@@ -27,6 +27,7 @@ import './theme/variables.css';
 import FundWalletPage from './pages/FundWalletPage';
 import FundingAddressPage from './pages/FundingAddress';
 import LatestTransaction from './pages/LatestTransaction';
+import Send from './pages/Send';
 
 setupIonicReact();
 
@@ -34,6 +35,9 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
+        <Route exact path='/send'>
+          <Send />
+        </Route>
         <Route exact path='/transactions'>
           <LatestTransaction />
         </Route>

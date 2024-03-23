@@ -2,7 +2,7 @@ import React from 'react';
 import { IonButton } from '@ionic/react';
 
 interface ButtonProps {
-  text: string;
+  text?: string;
   icon?: React.ReactElement;
   target?: string;
   width?: string;
