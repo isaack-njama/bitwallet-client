@@ -96,16 +96,28 @@ const LatestTransaction = () => {
         }}
       >
         <IonToolbar>
-          <img src='/Flip vertical.svg' style={{ marginLeft: '18px' }} />
-          <IonTitle style={{ fontSize: '12px' }}>Send</IonTitle>
+          <a href='/send' style={{ textDecoration: 'none', color: '#0A0A0A' }}>
+            <img src='/Flip vertical.svg' style={{ marginLeft: '18px' }} />
+            <IonTitle style={{ fontSize: '12px' }}>Send</IonTitle>
+          </a>
         </IonToolbar>
         <IonToolbar>
-          <img src='/Transactions.svg' style={{ marginLeft: '28px' }} />
-          <IonTitle style={{ fontSize: '12px' }}>Balance</IonTitle>
+          <a
+            href='/balance'
+            style={{ textDecoration: 'none', color: '#0A0A0A' }}
+          >
+            <img src='/Transactions.svg' style={{ marginLeft: '28px' }} />
+            <IonTitle style={{ fontSize: '12px' }}>Balance</IonTitle>
+          </a>
         </IonToolbar>
         <IonToolbar>
-          <img src='/Gear.svg' style={{ marginLeft: '28px' }} />
-          <IonTitle style={{ fontSize: '12px' }}>Settings</IonTitle>
+          <a
+            href='/settings'
+            style={{ textDecoration: 'none', color: '#0A0A0A' }}
+          >
+            <img src='/Gear.svg' style={{ marginLeft: '28px' }} />
+            <IonTitle style={{ fontSize: '12px' }}>Settings</IonTitle>
+          </a>
         </IonToolbar>
       </div>
     </IonContent>
