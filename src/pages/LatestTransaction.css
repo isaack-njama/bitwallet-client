@@ -1,6 +1,7 @@
 ion-card {
   --background: none;
-  margin: 36px;
+  max-width: 100vh;
+  margin: auto;
 }
 
 ion-label {
@@ -24,4 +25,8 @@ ion-toolbar {
 
 ion-title {
   cursor: pointer;
+}
+
+ion-toolbar {
+  width: 100vh;
 }
