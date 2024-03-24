@@ -1,0 +1,16 @@
+ion-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+ion-button {
+  --background: #fffff0;
+  margin: auto;
+  color: #0a0a0a;
+  width: 112px;
+  height: 27px;
+}
