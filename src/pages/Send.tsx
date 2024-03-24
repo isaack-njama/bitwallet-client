@@ -16,7 +16,7 @@ const Send = () => {
       <div
         style={{ position: 'fixed', bottom: 0, display: 'flex', gap: '6px' }}
       >
-        <Button text='Send' />
+        <Button text='Send' target='/transaction-details' />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import './Header.css';
 
 interface HeaderProps {
   pageTitle: string;
-  pageSubtitle: string;
+  pageSubtitle?: string;
   icon?: React.ReactElement;
 }
 
