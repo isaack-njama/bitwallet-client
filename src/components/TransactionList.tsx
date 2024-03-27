@@ -1,6 +1,8 @@
 import React from 'react';
 import { IonContent, IonInput, IonItem, IonLabel, IonList } from '@ionic/react';
 
+import PageHeader from '../components/Header';
+
 import './TransactionList.css';
 
 interface TransactionListProps {
@@ -18,6 +20,10 @@ const TransactionList: React.FC<TransactionListProps> = ({
 }) => {
   return (
     <IonContent>
+      <div style={{ textAlign: 'center', position: 'relative', top: '180px' }}>
+        <img src='/Tx details.svg' width='60px' height='60px' />
+        <PageHeader pageTitle='Send bitcoin' />
+      </div>
       <div className='container'>
         <IonList
           inset={true}
