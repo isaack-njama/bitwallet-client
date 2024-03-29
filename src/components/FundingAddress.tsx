@@ -1,7 +1,7 @@
+import { useEffect, useState } from 'react';
+import QRCode from 'react-qr-code';
+
 import BackButton from './BackButton';
-import ItemList from './ItemList';
-import ToggleButton from './ToggleButton';
-import './ResponsibilityDisclaimer.css';
 import { IonLabel } from '@ionic/react';
 
 interface ContainerProps {
@@ -10,11 +10,40 @@ interface ContainerProps {
   address: string;
 }
 
-const FundingAddress: React.FC<ContainerProps> = ({
-  title,
-  subtitle,
-  address,
-}) => {
+const FundingAddress: React.FC<ContainerProps> = ({ title, subtitle }) => {
+  const [address, setAddress] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const fetchAddress = async () => {
+      let body = {
+        phrase:
+          'screen always funny riot garment emerge canvas insane chuckle ice decade cigar',
+      };
+
+      try {
+        const response = await fetch(
+          'http://localhost:8080/api/get_wallet_address',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(body),
+          },
+        );
+        const data = await response.json();
+        console.log('JSON data: ', data);
+        setAddress(data.address);
+      } catch (error) {
+        console.error('Error fetching wallet address: ', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchAddress();
+  }, []);
+
   return (
     <div className='disclaimer-container'>
       <div className='disclaimer'>
@@ -33,7 +62,20 @@ const FundingAddress: React.FC<ContainerProps> = ({
           {subtitle}
         </IonLabel>
         <>
-          <img src='/QR Code.svg' width='250px' />
+          <div
+            style={{
+              height: 'auto',
+              margin: '0 auto',
+              width: '250px',
+            }}
+          >
+            <QRCode
+              size={256}
+              style={{ height: 'auto', maxWidth: '100%', width: '100%' }}
+              value={address}
+              viewBox={`0 0 256 256`}
+            />
+          </div>
           <h4 style={{ color: '#0A0A0A' }}>{address}</h4>
         </>
       </div>
